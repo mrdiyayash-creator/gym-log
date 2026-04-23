@@ -12,6 +12,7 @@
     "open:ios": "cap open ios"
   },
   "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
     "typescript": "^5.5.3",
     "vite": "^5.4.0",
     "vite-plugin-pwa": "^1.2.0"
