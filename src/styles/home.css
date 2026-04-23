@@ -1,0 +1,169 @@
+/* ═══════════════════════════════════════════════════
+   GymLog — Home Page Styles
+   ═══════════════════════════════════════════════════ */
+
+.home-greeting {
+  margin-bottom: var(--space-lg);
+}
+
+.home-greeting__date {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.home-greeting__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  margin-top: var(--space-xs);
+}
+
+.home-greeting__title span {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Stats Row ── */
+.home-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+/* ── Prediction Card ── */
+.prediction-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin-bottom: var(--space-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.prediction-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-gradient-warm);
+}
+
+.prediction-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.prediction-card__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-warning-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+}
+
+.prediction-card__icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.prediction-card__title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.prediction-card__sub {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.prediction-exercises {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+/* ── PR Card ── */
+.pr-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.pr-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.pr-item__badge {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-warning-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-warning);
+  flex-shrink: 0;
+}
+
+.pr-item__badge svg {
+  width: 18px;
+  height: 18px;
+}
+
+.pr-item__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.pr-item__exercise {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pr-item__detail {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}
+
+.pr-item__date {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+/* ── Weekly Chart ── */
+.weekly-chart-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.weekly-chart-container canvas {
+  width: 100% !important;
+  height: 180px !important;
+}
